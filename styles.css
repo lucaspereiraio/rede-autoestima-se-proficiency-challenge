@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Backgrounds */
+  --main-bgc: #fefefe;
+  --sec-bgc: #945a9a;
+  --thi-bgc: #e5d2e6;
+
+  /* Text colors */
+  --main-color: #000000;
+  --sec-color: #ffffff;
+
+  /* Alerts */
+  --success: #2dd912f2;
+  --error: #cc2727f2;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(1.6rem, 1.18vw, 1.9rem);
+  line-height: 2.5rem;
+  font-style: normal;
+  background-color: var(--main-bgc);
+  color: var(--main-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 15rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 1.2rem 12rem;
+  }
+}
+
+@media (max-width: 1070px) {
+  .container {
+    margin: 1.2rem 10rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 0.8rem 4.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0.8rem 3.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 0.8rem 2.4rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    margin: 0.8rem 1.2rem;
+  }
+}
