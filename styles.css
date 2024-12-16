@@ -38,6 +38,38 @@ body {
   align-items: center;
 }
 
+header {
+  background-color: var(--sec-bgc);
+}
+
+#header {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#header img {
+  width: 10%;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.projects {
+  background-color: var(--thi-bgc);
+}
+
+.contact {
+  background-color: var(--thi-bgc);
+}
+
+footer {
+  background-color: var(--sec-bgc);
+}
+
 @media (max-width: 1200px) {
   .container {
     margin: 1.2rem 12rem;
