@@ -33,7 +33,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 15rem;
+  padding: 1.5rem 15rem;
   justify-content: center;
   align-items: center;
 }
@@ -72,36 +72,36 @@ footer {
 
 @media (max-width: 1200px) {
   .container {
-    margin: 1.2rem 12rem;
+    padding: 1.2rem 12rem;
   }
 }
 
 @media (max-width: 1070px) {
   .container {
-    margin: 1.2rem 10rem;
+    padding: 1.2rem 10rem;
   }
 }
 
 @media (max-width: 1000px) {
   .container {
-    margin: 0.8rem 4.8rem;
+    padding: 0.8rem 4.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    margin: 0.8rem 3.6rem;
+    padding: 0.8rem 3.6rem;
   }
 }
 
 @media (max-width: 700px) {
   .container {
-    margin: 0.8rem 2.4rem;
+    padding: 0.8rem 2.4rem;
   }
 }
 
 @media (max-width: 380px) {
   .container {
-    margin: 0.8rem 1.2rem;
+    padding: 0.8rem 1.2rem;
   }
 }
