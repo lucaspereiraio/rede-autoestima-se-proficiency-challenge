@@ -38,8 +38,11 @@ body {
   align-items: center;
 }
 
+/* HEADER */
+
 header {
   background-color: var(--sec-bgc);
+  color: var(--sec-color);
 }
 
 #header {
@@ -48,7 +51,7 @@ header {
 }
 
 #header img {
-  width: 10%;
+  width: 20%;
   height: auto;
 }
 
@@ -58,16 +61,103 @@ header {
   list-style: none;
 }
 
+/* PROJECTS */
+
 .projects {
   background-color: var(--thi-bgc);
 }
+
+/* CONTACT */
 
 .contact {
   background-color: var(--thi-bgc);
 }
 
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#contact-form {
+  flex: 1 1 50%;
+  background-color: var(--sec-bgc);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem;
+}
+
+#contact-form label {
+  width: 100%;
+  text-align: left;
+  font-size: medium;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  border: 0.125rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  resize: none;
+}
+
+.form-image {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container img {
+  width: 50%;
+}
+
+#contact-form input.input-error,
+#contact-form textarea.input-error {
+  border: 0.125rem solid var(--error);
+}
+
+.error-message {
+  width: 100%;
+  text-align: left;
+  color: var(--error);
+  font-size: small;
+  margin-top: 0.1rem;
+  line-height: 1rem;
+}
+
+/* FOOTER */
+
 footer {
   background-color: var(--sec-bgc);
+  color: var(--sec-color);
+}
+
+/* TOAST */
+
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  z-index: 1000;
+  text-align: center;
+  font-size: medium;
+}
+
+.toast.show {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {

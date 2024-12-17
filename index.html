@@ -91,22 +91,44 @@
     <section id="contact" class="contact">
       <div class="container">
         <h1>Contato</h1>
-        <form id="contact-form">
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Mensagem:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
-        <img
-          src="/assets/logo-sem-descrição.png"
-          alt="Logotipo da Rede Autoestima-se"
-        />
+        <div class="form-container">
+          <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Digite aqui..."
+              required
+            />
+            <div class="error-message" id="error-name"></div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite aqui..."
+              required
+            />
+            <div class="error-message" id="error-email"></div>
+            <label for="message">Mensagem:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Digite aqui..."
+              required
+            ></textarea>
+            <div class="error-message" id="error-message"></div>
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="form-image">
+            <img
+              src="/assets/logo-sem-descrição.png"
+              alt="Logotipo da Rede Autoestima-se"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -117,6 +139,8 @@
       </div>
     </footer>
 
-    <script src="/script.js"></script>
+    <div id="toast" class="toast"></div>
+
+    <script src="/form-validation.js"></script>
   </body>
 </html>
