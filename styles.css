@@ -38,6 +38,16 @@ body {
   align-items: center;
 }
 
+.section-wrapper {
+  padding-top: clamp(3.6rem, 4.4vw, 5.6rem);
+  padding-bottom: clamp(3.6rem, 4.4vw, 5.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(3.6rem, 3.5vw, 6rem);
+}
+
 /* HEADER */
 
 header {
@@ -183,6 +193,31 @@ header {
 footer {
   background-color: var(--sec-bgc);
   color: var(--sec-color);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials li {
+  list-style: none;
+}
+
+.socials li a {
+  text-decoration: none;
+  color: var(--sec-color);
+  background-color: var(--thi-bgc);
+}
+
+#copyright {
+  font-size: 1rem;
 }
 
 /* TOAST */
