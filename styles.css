@@ -73,9 +73,10 @@ button:hover {
 /* HEADER */
 
 header {
-  /* position: sticky;
-  top: 0; */
-  background-color: var(--sec-bgc);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, var(--hover-color), var(--sec-bgc));
   color: var(--sec-color);
   display: flex;
   align-items: center;
@@ -83,6 +84,11 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+  transform: translateY(-100%);
 }
 
 #header {
@@ -145,7 +151,7 @@ header {
 
 .menu-button:hover,
 .menu-close-button:hover {
-  background-color: var(--sec-bgc);
+  background-color: transparent;
 }
 
 /* BANNER */
@@ -336,7 +342,7 @@ header {
 /* FOOTER */
 
 footer {
-  background-color: var(--sec-bgc);
+  background: linear-gradient(135deg, var(--hover-color), var(--sec-bgc));
   color: var(--sec-color);
 }
 
@@ -367,11 +373,44 @@ footer {
 }
 
 .socials li a:hover {
-  background-color: var(--hover-color);
+  background-color: var(--sec-bgc);
 }
 
 #copyright {
   font-size: 1rem;
+}
+
+/* BACK TO TOP */
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--sec-bgc);
+  color: white;
+  border: none;
+  border-radius: 25%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  background-color: var(--hover-color);
+}
+
+#back-to-top.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* TOAST */
@@ -420,8 +459,8 @@ footer {
   #main-menu {
     position: fixed;
     top: 0;
-    right: -60%;
-    width: 60%;
+    right: -75%;
+    width: 75%;
     height: 100%;
     background-color: var(--sec-bgc);
     color: var(--sec-color);
@@ -443,6 +482,11 @@ footer {
     display: block;
     top: 1.2rem;
     right: 10rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .menu-close-button:hover {
+    transform: rotate(180deg);
   }
 
   .logo-mobile {
@@ -538,6 +582,11 @@ footer {
   .menu-close-button {
     top: 0.8rem;
     right: 2.4rem;
+  }
+
+  #back-to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
 }
 

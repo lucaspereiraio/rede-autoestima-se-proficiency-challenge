@@ -3,7 +3,7 @@ const menuClose = document.getElementById("menu-close");
 const mainMenu = document.getElementById("main-menu");
 const menuItems = document.querySelectorAll(".menu-item");
 
-// Adiciona overlay para capturar cliques fora do menu
+// Overlay
 const overlay = document.createElement("div");
 overlay.className = "overlay";
 document.body.appendChild(overlay);
@@ -14,22 +14,39 @@ menuToggle.addEventListener("click", () => {
   overlay.classList.add("active");
 });
 
-// Fechar o menu ao clicar no botão "X"
+// Fechar com o X
 menuClose.addEventListener("click", () => {
   mainMenu.classList.remove("active");
   overlay.classList.remove("active");
 });
 
-// Fechar o menu ao clicar fora do menu
+// Fechar com o overlay
 overlay.addEventListener("click", () => {
   mainMenu.classList.remove("active");
   overlay.classList.remove("active");
 });
 
-// Fechar o menu ao clicar em qualquer item do menu
+// Fechar com um item
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     mainMenu.classList.remove("active");
     overlay.classList.remove("active");
   });
+});
+
+// SCROLL LISTENER
+
+const header = document.querySelector("header");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    header.classList.add("hidden");
+  } else {
+    header.classList.remove("hidden");
+  }
+
+  lastScrollY = currentScrollY;
 });
