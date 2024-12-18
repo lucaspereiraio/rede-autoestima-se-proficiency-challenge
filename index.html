@@ -34,43 +34,97 @@
       </div>
     </header>
 
+    <!-- Banner -->
+    <section id="banner" class="banner container">
+      <div class="banner-content section-wrapper">
+        <h1>Gerando mudanças e impactando vidas!</h1>
+        <p>
+          Contribua com projetos que inspiram autoestima e empoderamento na
+          comunidade.
+        </p>
+        <div class="banner-buttons">
+          <button onclick="alert('Saiba mais!')">Saiba Mais</button>
+          <button onclick="alert('Faça sua doação!')">Faça uma Doação</button>
+        </div>
+      </div>
+    </section>
+
     <!-- Sobre Nós -->
     <section id="about-us" class="about-us container">
       <div class="section-wrapper">
+        <!-- <img src="" alt="" /> -->
         <h1>Sobre Nós</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, fugiat
-          incidunt ipsa facilis blanditiis fuga, eius nesciunt doloribus alias
-          quas at voluptatibus! Iusto ea id expedita quisquam nostrum sunt
-          asperiores?
-        </p>
+        <div class="about-us-content">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero,
+            fugiat incidunt ipsa facilis blanditiis fuga, eius nesciunt
+            doloribus alias quas at voluptatibus! Iusto ea id expedita quisquam
+            nostrum sunt asperiores?
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+            officia voluptate enim velit quidem, fuga cupiditate saepe cumque
+            quas error natus distinctio, at aliquam obcaecati vel reprehenderit
+            facilis! Eius, quae?
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Projetos -->
-    <section id="projects" class="projects container">
+    <section id="projects" class="container">
       <div class="section-wrapper">
         <h1>Nossos Projetos</h1>
-        <ul>
-          <li>
-            <strong>Projeto 1:</strong> Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Ipsa, ipsum provident voluptatem nesciunt laborum
-            illo illum hic, sit, vel omnis esse qui aut perferendis ad excepturi
-            eligendi? Pariatur, nesciunt sequi?
-          </li>
-          <li>
-            <strong>Projeto 2:</strong> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Voluptas consectetur voluptates provident vel
-            laborum maiores esse impedit quisquam earum cum autem natus, quidem
-            quod necessitatibus nemo labore aut repellendus delectus.
-          </li>
-          <li>
-            <strong>Projeto 3:</strong> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Cumque odio earum aliquam cum dolore obcaecati sed
-            temporibus rem harum! Sunt quas hic fuga tempora, laudantium
-            pariatur minima itaque doloremque voluptatem.
-          </li>
-        </ul>
+        <div class="projects">
+          <div class="project-card">
+            <img src="/assets/project1.png" alt="Imagem do Projeto 1" />
+            <div class="card-content">
+              <h2>Projeto 1</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+                laboriosam distinctio dolorum dicta. Enim atque delectus magnam!
+                Unde, quibusdam quasi? Doloribus quia repellat sit tempore
+                adipisci nobis doloremque, numquam nihil.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/assets/project2.png" alt="Imagem do Projeto 2" />
+            <div class="card-content">
+              <h2>Projeto 2</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Veritatis quae, rerum consequatur maxime ea eius libero suscipit
+                aliquam porro voluptatibus ipsa explicabo amet incidunt ullam
+                voluptas quis, expedita veniam sed!
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/assets/project3.png" alt="Imagem do Projeto 3" />
+            <div class="card-content">
+              <h2>Projeto 3</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus facilis libero placeat soluta neque, illo ex
+                impedit nostrum suscipit at laudantium molestiae ea aliquam, sed
+                expedita eligendi maxime, debitis et?
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/assets/project4.png" alt="Imagem do Projeto 4" />
+            <div class="card-content">
+              <h2>Projeto 4</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus facilis libero placeat soluta neque, illo ex
+                impedit nostrum suscipit at laudantium molestiae ea aliquam, sed
+                expedita eligendi maxime, debitis et?
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -101,33 +155,35 @@
         <h1>Contato</h1>
         <div class="form-container">
           <form id="contact-form">
-            <label for="name">Nome:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Digite aqui..."
-              required
-            />
-            <div class="error-message" id="error-name"></div>
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Digite aqui..."
-              required
-            />
-            <div class="error-message" id="error-email"></div>
-            <label for="message">Mensagem:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Digite aqui..."
-              required
-            ></textarea>
-            <div class="error-message" id="error-message"></div>
+            <div class="contact-inputs">
+              <label for="name">Nome:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Digite aqui..."
+                required
+              />
+              <div class="error-message" id="error-name"></div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite aqui..."
+                required
+              />
+              <div class="error-message" id="error-email"></div>
+              <label for="message">Mensagem:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Digite aqui..."
+                required
+              ></textarea>
+              <div class="error-message" id="error-message"></div>
+            </div>
             <button type="submit">Enviar</button>
           </form>
           <div class="form-image">

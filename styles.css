@@ -17,6 +17,11 @@
   /* Alerts */
   --success: #2dd912f2;
   --error: #cc2727f2;
+
+  /* Extra colors */
+  --hover-color: #7c4582;
+  --border-color: #ddd;
+  --highlight-color: #ffc107;
 }
 
 body {
@@ -48,9 +53,28 @@ body {
   gap: clamp(3.6rem, 3.5vw, 6rem);
 }
 
+button {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: medium;
+  font-weight: bold;
+  background-color: var(--thi-bgc);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  color: var(--sec-color);
+  transform: scale(1.1);
+}
+
 /* HEADER */
 
 header {
+  /* position: sticky;
+  top: 0; */
   background-color: var(--sec-bgc);
   color: var(--sec-color);
   display: flex;
@@ -58,6 +82,7 @@ header {
   justify-content: center;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #header {
@@ -118,10 +143,125 @@ header {
   right: 15rem;
 }
 
+.menu-button:hover,
+.menu-close-button:hover {
+  background-color: var(--sec-bgc);
+}
+
+/* BANNER */
+
+#banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/assets/banner-image.png") center/cover no-repeat;
+  color: var(--sec-color);
+  overflow: hidden;
+}
+
+#banner h1 {
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-weight: bold;
+  padding: 2rem;
+  line-height: 5rem;
+}
+
+#banner p {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+#banner .banner-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#banner .banner-buttons button {
+  color: var(--sec-color);
+  background: var(--thi-bgc);
+}
+
+#banner .banner-buttons button:hover {
+  transform: scale(1.1);
+  background: var(--hover-color);
+}
+
+/* ABOUT US */
+
+.about-us-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-us-content p {
+  text-align: justify;
+}
+
 /* PROJECTS */
 
-.projects {
+#projects {
   background-color: var(--thi-bgc);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--main-bgc);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-card .card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.project-card h2 {
+  font-size: large;
+  margin-bottom: 0.5rem;
+  color: var(--sec-bgc);
+}
+
+.project-card p {
+  font-size: small;
+  color: var(--main-color);
+}
+
+/* CAN I HELP */
+
+.buttons {
+  display: flex;
+  gap: 2rem;
 }
 
 /* CONTACT */
@@ -145,6 +285,11 @@ header {
   align-items: center;
   justify-content: center;
   padding: 1.5rem 2.5rem;
+  gap: 1rem;
+}
+
+.contact-inputs {
+  width: 100%;
 }
 
 #contact-form label {
@@ -211,9 +356,18 @@ footer {
 }
 
 .socials li a {
-  text-decoration: none;
-  color: var(--sec-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   background-color: var(--thi-bgc);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.socials li a:hover {
+  background-color: var(--hover-color);
 }
 
 #copyright {
@@ -255,6 +409,10 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  #banner h1 {
+    line-height: 2.5rem;
+  }
+
   .menu-button {
     display: block;
   }
@@ -339,9 +497,32 @@ footer {
   .container {
     padding: 0.8rem 3.6rem;
   }
+
+  .about-us-content {
+    flex-direction: column;
+  }
+
   .menu-close-button {
     top: 0.8rem;
     right: 3.6rem;
+  }
+
+  .contact .section-wrapper {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .form-image {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
   }
 }
 
@@ -349,9 +530,25 @@ footer {
   .container {
     padding: 0.8rem 2.4rem;
   }
+
+  #banner {
+    height: 50%;
+  }
+
   .menu-close-button {
     top: 0.8rem;
     right: 2.4rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-container button {
+    width: 100%;
   }
 }
 
