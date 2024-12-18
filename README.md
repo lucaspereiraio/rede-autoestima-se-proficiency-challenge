@@ -6,12 +6,4 @@ Este projeto é um site desenvolvido para a ONG **Rede Autoestima-se**, com o ob
 
 O site pode ser aberto diretamente pelo link abaixo do GitHub Pages:
 
-[**Acesse aqui**](https://seu-usuario.github.io/rede-autoestima-se)
-
-## Como visualizar o site localmente
-
-1. Certifique-se de ter o [Git](https://git-scm.com/) instalado em sua máquina.
-2. Clone este repositório com o comando:
-   ```bash
-   git clone https://github.com/seu-usuario/rede-autoestima-se.git
-   ```
+[**Acesse aqui**](https://lucaspereiraio.github.io/rede-autoestima-se-proficiency-challenge/)
