@@ -21,7 +21,6 @@
   /* Extra colors */
   --hover-color: #7c4582;
   --border-color: #ddd;
-  --highlight-color: #ffc107;
 }
 
 body {
@@ -165,7 +164,7 @@ header.hidden {
   justify-content: center;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./assets/banner-image.png") center/cover no-repeat;
+    url("assets/banner-image.png") center/cover no-repeat;
   color: var(--sec-color);
   overflow: hidden;
 }
