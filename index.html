@@ -15,12 +15,20 @@
           alt="Logo da ONG Rede Autoestima-se"
           class="logo"
         />
-        <nav>
+        <button id="menu-toggle" class="menu-button">☰</button>
+        <nav id="main-menu">
+          <div class="logo-mobile">
+            <img
+              src="/assets/logo-completo.png"
+              alt="Logo da ONG Rede Autoestima-se"
+            />
+          </div>
+          <button id="menu-close" class="menu-close-button">X</button>
           <ul class="menu">
-            <li><a href="#about-us">Sobre Nós</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#can-i-help">Como Ajudar</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#about-us" class="menu-item">Sobre Nós</a></li>
+            <li><a href="#projects" class="menu-item">Projetos</a></li>
+            <li><a href="#can-i-help" class="menu-item">Como Ajudar</a></li>
+            <li><a href="#contact" class="menu-item">Contato</a></li>
           </ul>
         </nav>
       </div>
@@ -142,5 +150,6 @@
     <div id="toast" class="toast"></div>
 
     <script src="/form-validation.js"></script>
+    <script src="/mobile-header.js"></script>
   </body>
 </html>

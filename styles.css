@@ -43,6 +43,11 @@ body {
 header {
   background-color: var(--sec-bgc);
   color: var(--sec-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
 }
 
 #header {
@@ -55,10 +60,52 @@ header {
   height: auto;
 }
 
+#main-menu {
+  display: flex;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
   list-style: none;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: var(--sec-color);
+  font-size: large;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE MENU */
+.menu-button {
+  background: none;
+  border: none;
+  color: var(--sec-color);
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.logo-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-close-button {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--sec-color);
+  position: absolute;
+  top: 1.5rem;
+  right: 15rem;
 }
 
 /* PROJECTS */
@@ -172,9 +219,84 @@ footer {
   }
 }
 
+@media (max-width: 1024px) {
+  .menu-button {
+    display: block;
+  }
+
+  #main-menu {
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 60%;
+    height: 100%;
+    background-color: var(--sec-bgc);
+    color: var(--sec-color);
+    box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.2rem;
+    z-index: 1001;
+    gap: 8rem;
+  }
+
+  #main-menu.active {
+    right: 0;
+  }
+
+  .menu-close-button {
+    display: block;
+    top: 1.2rem;
+    right: 10rem;
+  }
+
+  .logo-mobile {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .menu-item:hover {
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+
 @media (max-width: 1000px) {
   .container {
     padding: 0.8rem 4.8rem;
+  }
+
+  #main-menu {
+    padding-top: 1.3rem;
+  }
+
+  .menu-close-button {
+    top: 1.2rem;
+    right: 4.8rem;
   }
 }
 
@@ -182,16 +304,29 @@ footer {
   .container {
     padding: 0.8rem 3.6rem;
   }
+  .menu-close-button {
+    top: 0.8rem;
+    right: 3.6rem;
+  }
 }
 
 @media (max-width: 700px) {
   .container {
     padding: 0.8rem 2.4rem;
   }
+  .menu-close-button {
+    top: 0.8rem;
+    right: 2.4rem;
+  }
 }
 
 @media (max-width: 380px) {
   .container {
     padding: 0.8rem 1.2rem;
+  }
+
+  .menu-close-button {
+    top: 0.8rem;
+    right: 1.2rem;
   }
 }
