@@ -95,6 +95,11 @@ header.hidden {
   justify-content: space-between;
 }
 
+#logo-header {
+  display: flex;
+  align-items: center;
+}
+
 #header img {
   width: 20%;
   height: auto;
