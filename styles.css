@@ -115,6 +115,7 @@ header.hidden {
   list-style: none;
   justify-content: space-between;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .menu-item {
@@ -122,6 +123,8 @@ header.hidden {
   color: var(--sec-color);
   font-size: large;
   transition: all 0.3s ease;
+  width: 100%;
+  white-space: nowrap;
 }
 
 /* MOBILE MENU */
